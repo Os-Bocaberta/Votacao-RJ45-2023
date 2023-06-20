@@ -1,0 +1,316 @@
+@charset "UTF-08";
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap");
+
+@font-face {
+  font-family: "Benedict";
+  src: url("/static/fonts/Benedict.ttf");
+}
+@font-face {
+  font-family: "Monument";
+  src: url("/static/fonts/MonumentExtended-Regular.otf");
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("/static/assets/home/background.png");
+  background-size: cover;
+  overflow-x: hidden;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+
+.topo {
+  width: 100%;
+  height: 45%;
+}
+
+.imagens {
+  height: 100%;
+  width: 100%;
+}
+
+.bandeirola {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  background-image: url("/static/assets/home/bandeirola.svg");
+  background-size: cover;
+}
+
+.center {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.center > p {
+  font-family: Benedict, cursive;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #514130;
+  margin-bottom: -10%;
+}
+
+.baixo {
+  display: flex;
+  height: 45%;
+  width: 100%;
+  align-items: flex-end;
+}
+.baixo > div {
+  height: 100%;
+}
+.imagens-esquerda {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 5em;
+  width: 50%;
+}
+.imagens-direita {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 3em;
+  width: 50%;
+}
+.fogueira,
+.cacto {
+  height: 50%;
+}
+
+.casal {
+  height: 65%;
+  margin-left: -25%;
+}
+
+.igreja {
+  height: 100%;
+  margin-right: -10%;
+}
+
+.nome {
+  color: #5f4c38;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+h1 {
+  color: white;
+  font-family: serif;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  border: 4px;
+  border-color: #7e6950;
+  font-family: Monument, sans-serif;
+  text-shadow: -1.4px -1.4px 0px #514130, -1.4px 1.4px 0px #514130,
+    1.4px -1.4px 0px #514130, 1.4px 1.5px 0px #514130;
+}
+
+.box {
+  background: #cbae8c;
+  border-width: 3px;
+  border-style: dotted;
+  border-radius: 10px;
+  border-color: #7e6950;
+  outline: 0;
+  font-size: 16px;
+  padding: 25px;
+}
+
+.envelope {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+.wrapButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.caixa {
+  height: 100vh;
+  width: 100vw;
+  margin-top: -100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  width: 100px;
+  text-align: center;
+  padding: 7px;
+  background-color: #514130;
+  color: #fff;
+  border-radius: 8px;
+  font-family: "Source Code Pro", monospace;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+.btn {
+  margin-top: 20px;
+}
+
+/* Trabalhando responsividade */
+
+@media screen and (max-width: 1390px) {
+  .imagens-direita {
+    gap: 0em;
+  }
+  .igreja {
+    margin-right: 0em;
+    height: 80%;
+  }
+  .imagens-esquerda {
+    gap: 0em;
+  }
+  .casal {
+    height: 60%;
+  }
+  .cacto,
+  .fogueira {
+    height: 45%;
+  }
+  .envelope {
+    width: 50%;
+  }
+  .center > p {
+    margin-bottom: -12%;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .bandeirola {
+    height: 100%;
+    background-size: 120%;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+  .casal {
+    height: 50%;
+    margin-left: 0em;
+  }
+  .igreja {
+    height: 70%;
+    margin-left: 0em;
+  }
+
+  .envelope {
+    width: 70%;
+  }
+  .bottom-esquerda {
+    width: 35%;
+    justify-content: flex-start;
+  }
+  .cacto {
+    display: none;
+  }
+  .imagens-direita {
+    width: 65%;
+  }
+  .center > p {
+    margin-bottom: -15%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .bandeirola {
+    background-size: 150%;
+  }
+  .casal {
+    height: 60%;
+  }
+
+  .igreja {
+    display: none;
+  }
+  .imagens-esquerda {
+    display: none;
+  }
+  .imagens-direita {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+  }
+  .center > p {
+    position: absolute;
+    bottom: 35%;
+  }
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 2px;
+    padding-bottom: 0em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .envelope {
+    width: 75%;
+  }
+  .bottom-direita {
+    justify-content: center;
+  }
+  .center > p {
+    bottom: 35%;
+  }
+  .nome {
+    padding-bottom: 10px;
+  }
+  h1 {
+    font-size: 2em;
+    margin-top: -10%;
+    padding-bottom: 25%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .bandeirola {
+    background-size: 250%;
+  }
+  .casal {
+    height: 55%;
+  }
+
+  .envelope {
+    width: 90%;
+  }
+  h1 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-top: -15%;
+    padding-bottom: 25%;
+  }
+  .nome {
+    font-size: 1em;
+    padding-bottom: 10px;
+  }
+  .caixa {
+    justify-content: center;
+  }
+  .box {
+    padding: 15px;
+  }
+  .center > p {
+    bottom: 25%;
+  }
+}

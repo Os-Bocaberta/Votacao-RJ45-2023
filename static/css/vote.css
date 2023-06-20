@@ -1,0 +1,317 @@
+@charset "UTF-08";
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+@font-face {
+  font-family: Edo;
+  src: url("/static/fonts/edo.ttf");
+}
+
+* {
+  margin: 0em;
+  padding: 0em;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background: url("/static/assets/home/background.png");
+  background-size: cover;
+  width: 100%;
+  overflow: hidden;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -100%;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 0em;
+  width: 100%;
+}
+
+form > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90%;
+  width: 50%;
+  gap: 0.8em;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 11%;
+  width: 55%;
+  border-radius: 6px;
+  border: 3px dotted #514130;
+  background-color: #c4a27d;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Source Code Pro", monospace;
+  color: #856f57;
+  transition: 0.4s ease-in-out;
+}
+button:hover,
+button:active {
+  background-color: #856f57;
+  color: #ffffff92;
+  border: 3px dotted #c4a27d;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+form > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 11%;
+  width: 55%;
+  border-radius: 6px;
+  border: 3px dotted #c4a27d;
+  font-size: 1em;
+  font-weight: 500;
+  text-align: center;
+  background-color: #514130;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Source Code Pro", monospace;
+}
+.envelope {
+  height: 90%;
+  width: 80%;
+}
+.imagens {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+.bandeirolas {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+  background-image: url("/static/assets/home/bandeirola.svg");
+  background-size: cover;
+  background-position: top center;
+}
+.top {
+  height: 45%;
+  width: 100%;
+}
+.center {
+  height: 10%;
+  width: 100%;
+}
+.anarrie {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+.anarrie p {
+  font-size: 2.8em;
+  text-align: center;
+  color: #51413062;
+  font-family: Edo, sans-serif;
+}
+.bottom {
+  display: flex;
+  justify-content: center;
+  height: 45%;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.bottom > div {
+  height: 100%;
+}
+.bottom-direita {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 3em;
+  width: 50%;
+}
+.bottom-esquerda {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 5em;
+  width: 50%;
+}
+.fogueira,
+.cacto {
+  height: 50%;
+}
+.casal {
+  margin-left: -25%;
+  height: 65%;
+}
+.igreja {
+  margin-right: -10%;
+  height: 100%;
+}
+
+/* Trabalhando responsividade */
+@media screen and (max-width: 1390px) {
+  .bottom-direita {
+    gap: 0em;
+  }
+  .igreja {
+    margin-right: 0em;
+    height: 80%;
+  }
+  .bottom-esquerda {
+    gap: 0em;
+  }
+  .casal {
+    height: 60%;
+  }
+  .cacto,
+  .fogueira {
+    height: 45%;
+  }
+}
+
+@media screen and (max-width: 1088px) {
+  .bandeirolas {
+    height: 100%;
+    background-size: 120%;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+  .casal {
+    height: 50%;
+    margin-left: 0em;
+  }
+  .igreja {
+    height: 70%;
+    margin-left: 0em;
+  }
+
+  .envelope {
+    width: 100%;
+  }
+  .bottom-esquerda {
+    width: 35%;
+    justify-content: flex-start;
+  }
+  .cacto {
+    display: none;
+  }
+  .bottom-direita {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .bandeirolas {
+    background-size: 200%;
+  }
+  .casal {
+    height: 60%;
+  }
+
+  .igreja {
+    display: none;
+  }
+  .bottom-esquerda {
+    display: none;
+  }
+  .bottom-direita {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .envelope {
+    width: 90%;
+  }
+  button {
+    width: 70%;
+  }
+  form > div > div {
+    width: 70%;
+  }
+  .lado_esquerdo {
+    align-items: flex-start;
+  }
+  .lado_direito {
+    align-items: flex-end;
+  }
+  .bottom-direita {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 650px) {
+  body,
+  html {
+    height: 250vh;
+    overflow-y: visible;
+  }
+  .bandeirolas {
+    background-size: 250%;
+  }
+  .casal {
+    height: 30%;
+    margin-left: 0em;
+  }
+  form {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  form > div {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 45%;
+  }
+
+  .lado_esquerdo {
+    align-items: center;
+  }
+  .lado_direito {
+    align-items: center;
+  }
+
+  .envelope {
+    align-items: center;
+    justify-content: center;
+  }
+  .bottom-esquerda {
+    display: none;
+  }
+  .bottom-direita {
+    justify-content: center;
+    width: 100%;
+  }
+  .igreja {
+    display: none;
+  }
+}

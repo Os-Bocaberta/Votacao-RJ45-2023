@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/vote.css' %}" />
+    <title>Vote</title>
+  </head>
+  <body>
+    <!-- Seção do código que trabalha as imagens -->
+    <div class="imagens">
+      <div class="top">
+        <div class="bandeirolas">
+          <!-- div só contem background -->
+        </div>
+      </div>
+      <div class="center">
+        <div class="anarrie">
+          <p>Anarriê!</p>
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="bottom-esquerda">
+          <img
+            class="fogueira"
+            src="{% static 'assets/home/fogueira.png' %}"
+            alt=""
+            aria-hidden="true"
+          />
+          <img class="cacto" src="{% static 'assets/home/cacto.png' %}" alt="" aria-hidden="true" />
+        </div>
+        <div class="bottom-direita">
+          <img class="casal" src="{% static 'assets/home/casal.png' %}" alt="" aria-hidden="true" />
+          <img class="igreja" src="{% static 'assets/home/igreja.png' %}" alt="" aria-hidden="true" />
+        </div>
+      </div>
+    </div>
+    <!-- Seção do código que trabalha os elementos funcionais -->
+    <main>
+      <div class="envelope">
+        <form action="#" method="post">
+          <div class="lado_esquerdo">
+            <div>Escolha sua Rainha</div>
+            <button>Rainha 1</button>
+            <button>Rainha 2</button>
+            <button>Rainha 3</button>
+            <button>Rainha 4</button>
+          </div>
+          <div class="lado_direito">
+            <div>Escolha seu Rei</div>
+            <button>Rei 1</button>
+            <button>Rei 2</button>
+            <button>Rei 3</button>
+            <button>Rei 4</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
