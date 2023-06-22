@@ -28,34 +28,52 @@
             class="fogueira"
             src="{% static 'assets/home/fogueira.png' %}"
             alt=""
-            aria-hidden="true"
-          />
-          <img class="cacto" src="{% static 'assets/home/cacto.png' %}" alt="" aria-hidden="true" />
+            aria-hidden="true" />
+          <img
+            class="cacto"
+            src="{% static 'assets/home/cacto.png' %}"
+            alt=""
+            aria-hidden="true" />
         </div>
         <div class="bottom-direita">
-          <img class="casal" src="{% static 'assets/home/casal.png' %}" alt="" aria-hidden="true" />
-          <img class="igreja" src="{% static 'assets/home/igreja.png' %}" alt="" aria-hidden="true" />
+          <img
+            class="casal"
+            src="{% static 'assets/home/casal.png' %}"
+            alt=""
+            aria-hidden="true" />
+          <img
+            class="igreja"
+            src="{% static 'assets/home/igreja.png' %}"
+            alt=""
+            aria-hidden="true" />
         </div>
       </div>
     </div>
     <!-- Seção do código que trabalha os elementos funcionais -->
     <main>
       <div class="envelope">
-        <form action="#" method="post">
-          <div class="lado_esquerdo">
-            <div>Escolha sua Rainha</div>
-            <button>Rainha 1</button>
-            <button>Rainha 2</button>
-            <button>Rainha 3</button>
-            <button>Rainha 4</button>
+        <form method="post" action="{% url 'post_datas' %}">
+          {% csrf_token %}
+          <div class="options">
+            <div class="lado_esquerdo">
+              <div>Escolha sua Rainha</div>
+              <select name="queen" id="queen">
+                <option value="0">Rainha1</option>
+                <option value="1">Rainha2</option>
+                <option value="2">Rainha3</option>
+              </select>
+            </div>
+            <div class="lado_direito">
+              <div>Escolha seu Rei</div>
+              <select name="king" id="queen">
+                <option value="0">Rei1</option>
+                <option value="1">Rei2</option>
+                <option value="2">Rei3</option>
+              </select>
+            </div>
           </div>
-          <div class="lado_direito">
-            <div>Escolha seu Rei</div>
-            <button>Rei 1</button>
-            <button>Rei 2</button>
-            <button>Rei 3</button>
-            <button>Rei 4</button>
-          </div>
+
+          <button>ENVIAR</button>
         </form>
       </div>
     </main>

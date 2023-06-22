@@ -38,6 +38,7 @@ main {
 
 form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -53,6 +54,11 @@ form > div {
   height: 90%;
   width: 50%;
   gap: 0.8em;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
 }
 
 button {
