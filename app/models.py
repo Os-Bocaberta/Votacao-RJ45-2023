@@ -4,14 +4,14 @@ from django.db import models
 
 
 class Candidates(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
     type = models.CharField(max_length=255, null=True)
-    registration = models.IntegerField()
+    path_image = models.CharField(max_length=255, null=True)
 
 
 class Voters(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
     registration = models.IntegerField()
     vote_king = models.CharField(max_length=255, null=True, blank=True)

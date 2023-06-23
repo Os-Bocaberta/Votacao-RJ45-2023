@@ -64,8 +64,12 @@
                 type="radio"
                 name="queen"
                 id="{{q.id}}"
+                
                 value="{{q.id}}" />
-              <label for="{{q.id}}">{{q.name}}</label>
+              <label for="{{q.id}}">
+                <img class="image_candidate" src="{% static q.path_image %}" alt="{{q.name}}" />
+                {{q.name}}</label
+              >
             </div>
             {% endfor %}
           </div>
@@ -80,7 +84,10 @@
                 name="king"
                 id="{{k.id}}"
                 value="{{k.id}}" />
-              <label for="{{k.id}}">{{k.name}}</label>
+                <label for="{{k.id}}">
+                  <img class="image_candidate" src="{% static k.path_image %}" alt="{{k.name}}" />
+                  {{k.name}}</label
+                >
             </div>
             {% endfor %}
           </div>

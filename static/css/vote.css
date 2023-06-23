@@ -69,7 +69,7 @@ button,
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 11%;
+  height: clamp(12%, 10vw, 14%);
   width: 55%;
   border-radius: 6px;
   border: 3px dotted #514130;
@@ -91,8 +91,20 @@ button:active,
   cursor: pointer;
 }
 
+.image_candidate {
+  height: calc(10vw / 3);
+  width: calc(10vw / 3);
+  min-height: 50px;
+  min-width: 50px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
 label {
-  display: flex;
+  display: grid;
+  gap: 15px;
+  padding: 0 20px;
+  grid-template-columns: 20% 80%;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -170,6 +182,7 @@ form > div > div {
   height: 45%;
   width: 100%;
   align-items: flex-end;
+  overflow-x: hidden;
 }
 
 .bottom > div {
