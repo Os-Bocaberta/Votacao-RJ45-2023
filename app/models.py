@@ -6,6 +6,7 @@ from django.db import models
 class Candidates(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=255)
+    type = models.CharField(max_length=255, null=True)
     registration = models.IntegerField()
 
 

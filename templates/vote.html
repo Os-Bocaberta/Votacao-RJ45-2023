@@ -54,26 +54,38 @@
       <div class="envelope">
         <form method="post" action="{% url 'post_datas' %}">
           {% csrf_token %}
-          <div class="options">
-            <div class="lado_esquerdo">
-              <div>Escolha sua Rainha</div>
-              <select name="queen" id="queen">
-                <option value="0">Rainha1</option>
-                <option value="1">Rainha2</option>
-                <option value="2">Rainha3</option>
-              </select>
+          <div class="lado_esquerdo">
+            <div>Escolha sua Rainha</div>
+
+            {% for q in c_queen %}
+            <div class="container_select">
+              <input
+                required
+                type="radio"
+                name="queen"
+                id="{{q.id}}"
+                value="{{q.id}}" />
+              <label for="{{q.id}}">{{q.name}}</label>
             </div>
-            <div class="lado_direito">
-              <div>Escolha seu Rei</div>
-              <select name="king" id="queen">
-                <option value="0">Rei1</option>
-                <option value="1">Rei2</option>
-                <option value="2">Rei3</option>
-              </select>
+            {% endfor %}
+          </div>
+          <div class="lado_direito">
+            <div>Escolha seu Rei</div>
+
+            {% for k in c_king %}
+            <div class="container_select">
+              <input
+                required
+                type="radio"
+                name="king"
+                id="{{k.id}}"
+                value="{{k.id}}" />
+              <label for="{{k.id}}">{{k.name}}</label>
             </div>
+            {% endfor %}
           </div>
 
-          <button>ENVIAR</button>
+          <button class="push">ENVIAR</button>
         </form>
       </div>
     </main>

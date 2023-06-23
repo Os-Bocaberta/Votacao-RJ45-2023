@@ -38,7 +38,6 @@ main {
 
 form {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -61,7 +60,12 @@ form > div {
   flex-direction: row;
 }
 
-button {
+input {
+  display: none;
+}
+
+button,
+.container_select {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,12 +82,28 @@ button {
   transition: 0.4s ease-in-out;
 }
 button:hover,
-button:active {
+button:active,
+.container_select:hover {
   background-color: #856f57;
   color: #ffffff92;
   border: 3px dotted #c4a27d;
   opacity: 0.8;
   cursor: pointer;
+}
+
+label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input:checked + label {
+  background-color: #514130;
+  color: #fff;
 }
 
 form > div > div {
@@ -182,6 +202,14 @@ form > div > div {
   height: 100%;
 }
 
+.push {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 250px;
+  height: 50px;
+}
+
 /* Trabalhando responsividade */
 @media screen and (max-width: 1390px) {
   .bottom-direita {
@@ -258,7 +286,8 @@ form > div > div {
   .envelope {
     width: 90%;
   }
-  button {
+  button,
+  .container_select {
     width: 70%;
   }
   form > div > div {

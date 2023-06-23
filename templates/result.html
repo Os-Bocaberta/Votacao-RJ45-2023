@@ -6,48 +6,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/result.css' %}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/result.css' %}" />
     <title>Result</title>
   </head>
 
   <body>
     <div class="header">
-      <img class="bandeiras" src="{% static 'assets/home/bandeiras.png' %}" alt="imagem 1" />
+      <img
+        class="bandeiras"
+        src="{% static 'assets/home/bandeiras.png' %}"
+        alt="imagem 1" />
     </div>
 
     <div class="resultado">
       <h1>Resultados:</h1>
 
       <div>
+        {% for k in king.values %}
         <div class="containerBarra">
-          <h2>Rei1</h2>
-          <span></span>
+          <h2>{{k.1}}</h2>
+          <div>
+            <span style="width: {{k.0}}%;"></span>
+          </div>
         </div>
-        <div class="containerBarra">
-          <h2>Rei2</h2>
-          <span></span>
-        </div>
-        <div class="containerBarra">
-          <h2>Rei3</h2>
-          <span></span>
-        </div>
+        {% endfor %}
       </div>
 
       <span class="division"></span>
 
       <div>
+        {% for q in queen.values %}
         <div class="containerBarra">
-          <h2>Rainha1</h2>
-          <span></span>
+          <h2>{{q.1}}</h2>
+          <div>
+            <span style="width: {{q.0}}%;"></span>
+          </div>
         </div>
-        <div class="containerBarra">
-          <h2>Rainha2</h2>
-          <span></span>
-        </div>
-        <div class="containerBarra">
-          <h2>Rainha3</h2>
-          <span></span>
-        </div>
+        {% endfor %}
       </div>
     </div>
 

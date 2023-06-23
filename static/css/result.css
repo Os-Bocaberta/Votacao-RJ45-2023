@@ -91,15 +91,20 @@ body {
   align-items: flex-start;
 }
 
-.containerBarra span {
-  display: block;
-  content: " ";
-  width: 100%;
+.containerBarra div {
   min-height: 18px;
   height: 3vh;
   max-height: 40px;
   border-radius: 10px;
   border: dashed 1.7px #5f4c38;
+  width: 100%;
+}
+
+.containerBarra div span {
+  display: block;
+  content: " ";
+  height: 100%;
+  border-radius: 10px;
 }
 
 .containerBarra:nth-child(1) span {
@@ -161,6 +166,7 @@ body {
     min-height: auto;
     max-height: none;
     height: auto;
+    gap: 20px;
   }
 
   .division {
