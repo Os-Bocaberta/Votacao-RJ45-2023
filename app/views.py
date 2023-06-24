@@ -100,9 +100,9 @@ def result(request):
             i[0] = str((i[0] / total_vote_queen) * 100).replace(',', '.')
 
         result_king_sorted = dict(
-            sorted(datas_result_king.items(), key=lambda x: x[1][0], reverse=True))
+            sorted(datas_result_king.items(), key=lambda x: float(x[1][0]), reverse=True))
         result_queen_sorted = dict(
-            sorted(datas_result_queen.items(), key=lambda x: x[1][0], reverse=True))
+            sorted(datas_result_queen.items(), key=lambda x: float(x[1][0]), reverse=True))
 
         king_three = list(result_king_sorted.items())[:3]
         rendering_king = {}
