@@ -15,7 +15,8 @@ Produzido Pelos Alunos do 3IRC - 2023 :)
 
 ## Introdução
 
-Projeto iniciado no ano de 2023 onde o objetivo foi a criação de um site para a votação de Rainha e Rei RJ45.
+Projeto iniciado no ano de 2023 onde o objetivo foi a criação de um site para a votação de Rainha e Rei RJ45. 
+- #### AMBIENTE DE PRODUÇÃO EM LINUX! TESTES NÃO FORAM FEITOS EM WINDOWS
 
 ## Requisitos
 
@@ -29,8 +30,8 @@ Projeto iniciado no ano de 2023 onde o objetivo foi a criação de um site para 
 - python3
 - VirtualEnv
 
-## Deployment - Linux:
-
+## Deployment
+### 1. Preparando Ambiente
 1. Clonando Repositório:
 ```
 git clone https://github.com/Os-Bocaberta/Votacao-RJ45-2023.git
