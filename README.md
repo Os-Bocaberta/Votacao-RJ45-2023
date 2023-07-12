@@ -23,7 +23,7 @@ Projeto iniciado no ano de 2023 onde o objetivo foi a criação de um site para 
 - Maquina Virtual min 1vCPU 1GB Ram
 - Poder de Vontade <3
 
-## Dependencias 
+## Dependências  
 - Django==4.2.2
 - SqLite
 - Git
