@@ -21,7 +21,7 @@ Projeto iniciado no ano de 2023 onde o objetivo foi a criação de um site para 
 ## Requisitos
 
 - Maquina Virtual min 1vCPU 1GB Ram
-- Poder de Vontade
+- Poder de Vontade <3
 
 ## Dependencias 
 - Django==4.2.2
@@ -59,7 +59,8 @@ python3 manage.py runserver
 
 ## Solução de Problemas
 #### Qualquer Tipo de Problema:
-- [@Vineees](https://www.github.com/Vineees)
+- [@Vineees](https://www.github.com/Vineees) :)
+- Dependendo do ambiente onde você estiver trabalhando será preciso a criação de um proxy reverso, pode ser tanto Apache2 ou Nginx, porém nosso ambiente foi utilizado o nginx. Verifique os templates para ter uma ideia de como configurar 
 ## Outros Link's
 #### Reverse Proxy Templates [AQUI](https://github.com/Vineees/Django-ReverseProxy)
 
