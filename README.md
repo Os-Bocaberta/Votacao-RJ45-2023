@@ -1,5 +1,5 @@
 
-# Site Votação Rj45 - 2023
+# Site Votação Rj45 - 2023 😲
 
 Produzido Pelos Alunos do 3IRC - 2023 :)
 ```
@@ -58,6 +58,8 @@ python3 manage.py runserver
 ```
 
 ## Solução de Problemas
+#### Qualquer Tipo de Problema:
+- [@Vineees](https://www.github.com/Vineees)
 ## Outros Link's
 #### Reverse Proxy Templates [AQUI](https://github.com/Vineees/Django-ReverseProxy)
 
